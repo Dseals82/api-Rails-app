@@ -27,8 +27,8 @@ RSpec.describe Article, type: :model do
       expect(invalid_article).not_to be_valid
     end
   end
-  describe '.rencent' do
-    it 'should list the most recent article first'
+  describe '.recent' do
+    it 'should list the recent article first'
     old_article =  create :article
     newer_article = create :article
     expect(described_class.recent).to eq(

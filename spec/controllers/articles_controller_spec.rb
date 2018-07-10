@@ -18,7 +18,7 @@ describe ArticlesController do
       "slug" => article.slug
       })
     end
-    end
+  end
     it "should return articles in the proper order" do
       old_article = create :article
       newer_article = create :article
@@ -32,6 +32,7 @@ describe ArticlesController do
        expect(json_data.length).to eq 1
        expected_article = Article.recent.second.id.to_s
        expect(json_data.first['id']).to eq(expected_article)
+
     end
   end
 end
